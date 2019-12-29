@@ -1,7 +1,7 @@
-package com.xiangmin.config;
+package com.xk.config;
 
-import com.xiangmin.aspect.LogAspect;
-import com.xiangmin.service.MathCalculator;
+import com.xk.aspect.LogAspect;
+import com.xk.service.MathCalculator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;

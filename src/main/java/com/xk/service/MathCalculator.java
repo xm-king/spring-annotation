@@ -1,4 +1,4 @@
-package com.xiangmin.service;
+package com.xk.service;
 
 /**
  * @author pingchun@meili-inc.com

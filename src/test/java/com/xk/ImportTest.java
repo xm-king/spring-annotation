@@ -1,10 +1,10 @@
-package com.xiangmin;
+package com.xk;
 
-import com.xiangmin.bean.Blue;
-import com.xiangmin.bean.Color;
-import com.xiangmin.bean.Green;
-import com.xiangmin.bean.Red;
-import com.xiangmin.config.MainConfig;
+import com.xk.bean.Blue;
+import com.xk.bean.Color;
+import com.xk.bean.Green;
+import com.xk.bean.Red;
+import com.xk.config.MainConfig;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

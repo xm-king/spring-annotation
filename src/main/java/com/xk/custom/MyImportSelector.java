@@ -1,4 +1,4 @@
-package com.xiangmin.custom;
+package com.xk.custom;
 
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
@@ -10,6 +10,6 @@ import org.springframework.core.type.AnnotationMetadata;
 public class MyImportSelector implements ImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        return new String[]{"com.xiangmin.bean.Color","com.xiangmin.bean.Blue","com.xiangmin.bean.Green"};
+        return new String[]{"com.xk.bean.Color","com.xk.bean.Blue","com.xk.bean.Green"};
     }
 }

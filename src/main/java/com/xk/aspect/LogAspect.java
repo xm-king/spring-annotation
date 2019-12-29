@@ -1,4 +1,4 @@
-package com.xiangmin.aspect;
+package com.xk.aspect;
 
 
 import org.aspectj.lang.JoinPoint;
@@ -11,7 +11,7 @@ import org.aspectj.lang.annotation.*;
 @Aspect
 public class LogAspect {
 
-    @Pointcut("execution(public int com.xiangmin.service.MathCalculator.*(..))")
+    @Pointcut("execution(public int com.xk.service.MathCalculator.*(..))")
     public void logPointcut(){};
 
     @Before("logPointcut()")

@@ -1,6 +1,6 @@
-package com.xiangmin.config;
+package com.xk.config;
 
-import com.xiangmin.bean.Person;
+import com.xk.bean.Person;
 import org.springframework.context.annotation.*;
 
 /**
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.*;
 //配置类相当于xml文件，Configuration告诉Spring这是一个配置类
 @Configuration
 //ComponentScan 指定要扫描的包
-//@ComponentScan("com.xiangmin")
+@ComponentScan("com.xk")
 @PropertySource("classpath:/person.properties")
 //@Import(Color.class)
 //@Import({MyImportSelector.class,MyImportBeanDefinitionRegistrar.class})

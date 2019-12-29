@@ -1,6 +1,6 @@
-package com.xiangmin.service;
+package com.xk.service;
 
-import com.xiangmin.bean.Person;
+import com.xk.bean.Person;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

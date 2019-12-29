@@ -1,6 +1,6 @@
-package com.xiangmin.custom;
+package com.xk.custom;
 
-import com.xiangmin.bean.Red;
+import com.xk.bean.Red;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;

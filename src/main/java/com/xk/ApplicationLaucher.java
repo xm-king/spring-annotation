@@ -1,7 +1,7 @@
-package com.xiangmin;
+package com.xk;
 
-import com.xiangmin.bean.Person;
-import com.xiangmin.config.MainConfig;
+import com.xk.bean.Person;
+import com.xk.config.MainConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

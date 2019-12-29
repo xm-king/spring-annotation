@@ -1,4 +1,4 @@
-package com.xiangmin.bean;
+package com.xk.bean;
 
 import org.springframework.beans.factory.annotation.Value;
 

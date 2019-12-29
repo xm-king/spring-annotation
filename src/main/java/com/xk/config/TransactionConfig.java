@@ -1,4 +1,4 @@
-package com.xiangmin.config;
+package com.xk.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
