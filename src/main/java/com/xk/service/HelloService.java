@@ -11,6 +11,6 @@ import javax.annotation.Resource;
  */
 @Component
 public class HelloService {
-    @Resource(name = "person")
+    @Resource
     Person person;
 }

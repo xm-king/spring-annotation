@@ -1,22 +1,22 @@
 package com.xk;
 
+
 import com.xk.bean.Person;
-import com.xk.config.MainConfig;
 import com.xk.service.HelloService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.Arrays;
 
 /**
- * @author pingchun@meili-inc.com
- * @since 2019/7/27
+ * @author pingchun@gegejia.com
+ * @since 2020/1/2
  */
-public class ApplicationLaucher {
-
-
+@SpringBootApplication(scanBasePackages = "com.xk")
+public class BootApplication {
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(BootApplication.class,args);
         Person person = applicationContext.getBean("personDefault",Person.class);
         System.out.println(person);
         HelloService helloService = applicationContext.getBean(HelloService.class);
