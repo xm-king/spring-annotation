@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @author pingchun@meili-inc.com
  * @since 2019/8/24
  */
-public class ConfigTest {
+public class BeanConfigTest {
     @Test
     public void test1(){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);

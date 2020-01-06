@@ -2,8 +2,6 @@ package com.xk.config;
 
 import com.xk.property.PersonProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -12,11 +10,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableConfigurationProperties(PersonProperty.class)
-@ComponentScan("com.xk")
 public class PropertyConfig {
-
-    @Bean
-    public PersonProperty personProperty(){
-        return new PersonProperty();
-    }
 }

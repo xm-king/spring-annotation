@@ -9,7 +9,6 @@ import org.springframework.context.annotation.*;
  */
 //配置类相当于xml文件，Configuration告诉Spring这是一个配置类
 @Configuration
-//ComponentScan 指定要扫描的包
 @ComponentScan("com.xk")
 public class MainConfig {
 
@@ -18,16 +17,4 @@ public class MainConfig {
         return new Person();
     }
 
-//    @Scope
-//    @Lazy
-//    @Bean("person")
-//    public Person createPerson(){
-//        return new Person(35,"相民");
-//    }
-
-//    @Bean("personConditional")
-//    @Conditional(PersonConditional.class)
-//    public Person createPersonConditional(){
-//        return new Person(30,"相民");
-//    }
 }
