@@ -1,5 +1,6 @@
 package com.xk.custom;
 
+import com.xk.bean.Color;
 import com.xk.bean.Red;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -20,8 +21,10 @@ public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
      */
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
-       boolean definition = registry.containsBeanDefinition("red");
-        BeanDefinition beanDefinition = new RootBeanDefinition(Red.class);
-       registry.registerBeanDefinition("red",beanDefinition);
+       boolean definition = registry.containsBeanDefinition("color");
+       if(!definition) {
+           BeanDefinition beanDefinition = new RootBeanDefinition(Color.class);
+           registry.registerBeanDefinition("color", beanDefinition);
+       }
     }
 }

@@ -11,9 +11,6 @@ import org.springframework.context.annotation.*;
 @Configuration
 //ComponentScan 指定要扫描的包
 @ComponentScan("com.xk")
-@PropertySource("classpath:/person.properties")
-//@Import(Color.class)
-//@Import({MyImportSelector.class,MyImportBeanDefinitionRegistrar.class})
 public class MainConfig {
 
     @Bean("personDefault")

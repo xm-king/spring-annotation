@@ -1,15 +1,12 @@
 package com.xk.bean;
 
-import org.springframework.beans.factory.annotation.Value;
 
 /**
  * @author pingchun@meili-inc.com
  * @since 2019/7/27
  */
 public class Person {
-    @Value("${person.age}")
     private int age;
-    @Value("${person.name}")
     private String name;
 
     public Person(){
