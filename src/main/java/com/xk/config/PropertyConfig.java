@@ -1,14 +1,17 @@
 package com.xk.config;
 
-import com.xk.property.PersonProperty;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import com.xk.bean.Person;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
 /**
  * @author pingchun@gegejia.com
  * @since 2020/1/6
  */
 @Configuration
-@EnableConfigurationProperties(PersonProperty.class)
+@PropertySource("classpath:/person.properties")
+@ComponentScan("com.xk.bean")
 public class PropertyConfig {
 }

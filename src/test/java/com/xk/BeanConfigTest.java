@@ -12,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class BeanConfigTest {
     @Test
-    public void test1(){
+    public void beanTest(){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
         Person person = applicationContext.getBean("personDefault",Person.class);
         System.out.println(person);

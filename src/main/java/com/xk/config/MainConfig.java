@@ -9,7 +9,6 @@ import org.springframework.context.annotation.*;
  */
 //配置类相当于xml文件，Configuration告诉Spring这是一个配置类
 @Configuration
-@ComponentScan("com.xk")
 public class MainConfig {
 
     @Bean("personDefault")
