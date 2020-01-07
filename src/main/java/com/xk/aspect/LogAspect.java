@@ -11,7 +11,7 @@ import org.aspectj.lang.annotation.*;
 @Aspect
 public class LogAspect {
 
-    @Pointcut("execution(public int com.xk.service.MathCalculator.*(..))")
+    @Pointcut("execution(public int com.xk.service.CalculatorService.*(..))")
     public void logPointcut(){};
 
     @Before("logPointcut()")

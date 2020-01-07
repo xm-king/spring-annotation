@@ -1,7 +1,7 @@
 package com.xk.config;
 
 import com.xk.aspect.LogAspect;
-import com.xk.service.MathCalculator;
+import com.xk.service.CalculatorService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -20,7 +20,7 @@ public class AopConfiguration {
     }
 
     @Bean
-    public MathCalculator mathCalculator(){
-       return new MathCalculator();
+    public CalculatorService mathCalculator(){
+       return new CalculatorService();
     }
 }

@@ -1,7 +1,7 @@
 package com.xk;
 
 import com.xk.config.AopConfiguration;
-import com.xk.service.MathCalculator;
+import com.xk.service.CalculatorService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -15,7 +15,7 @@ public class AopConfigTest {
     @Test
     public void aopTest(){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AopConfiguration.class);
-        MathCalculator mathCalculator = applicationContext.getBean(MathCalculator.class);
-        mathCalculator.div(5,2);
+        CalculatorService calculatorService = applicationContext.getBean(CalculatorService.class);
+        calculatorService.div(5,2);
     }
 }
