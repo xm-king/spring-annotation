@@ -20,7 +20,7 @@ public class LogAspect {
 
     @Before("logPointcut()")
     public void beforLog(JoinPoint joinPoint){
-        System.out.println("运行参数:"+joinPoint.getSignature());
+        System.out.println("运行方法:"+joinPoint.getSignature()+",运行参数:"+joinPoint.getArgs());
     }
 
     @After("logPointcut()")
@@ -28,9 +28,9 @@ public class LogAspect {
         System.out.println("结束参数:");
     }
 
-    @AfterReturning("logPointcut()")
-    public void returnLog(){
-        System.out.println("运行结束:");
+    @AfterReturning(value = "logPointcut()",returning = "result")
+    public void returnLog(JoinPoint joinPoint,Object result){
+        System.out.println("运行结束:"+result);
     }
 
     @AfterThrowing("logPointcut()")
