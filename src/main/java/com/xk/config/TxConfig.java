@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 @Configuration
 @PropertySource("classpath:/jdbc.properties")
 @EnableTransactionManagement
-public class JdbcConfig {
+public class TxConfig {
     @Value("${jdbc.url}")
     private String jdbcUrl;
 
