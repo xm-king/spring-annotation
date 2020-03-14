@@ -1,1 +1,37 @@
-# spring-annotation
+# spring-refresh启动流程
+1. prepareRefresh
+    * initPropertySources:初始化一些属性设置,子类自定义个性化的属性设置方法
+    * validateRequiredProperties:校验属性的合法性
+    * earlyApplicationEvents:保存容器中的一些早期事件
+2. obtainFreshBeanFactory
+    * refreshBeanFactory:创建了一个DefaultListableBeanFactory
+3. prepareBeanFactory,对BeanFactory做预处理工作
+    * 略
+4. postProcessBeanFactory:BeanFactory准备工作完成后进行的后置处理工作
+    * 子类重写
+5. invokeBeanFactoryPostProcessors 调用BeanFactory后置处理器
+    * BeanDefinitionRegistryPostProcessor
+    * BeanFactoryPostProcessor
+6. registerBeanPostProcessors,注册Bean后置处理器
+    * 略
+7. initMessageSource:初始化上下文消息源
+    * 略
+8. initApplicationEventMulticaster,事件广播器
+    * 略
+9. onRefresh
+    * 子类重写
+10. registerListeners,注册监听器
+11. finishBeanFactoryInitialization,初始化所有的单例Bean
+    * 获取容器中所有的Bean，依次进行初始化和创建对象
+    * 获取Bean的定义信息，RootBeanDefinition
+    * Bean不是抽象的，是单实例的，不是懒加载方式
+        * 缓存中获取
+        * createBean
+    * doCreateBean,创建Bean实例
+        * createBeanInstance,创建Bean对象
+        * populateBean,属性赋值
+        * initializeBean，对象初始化
+            * invokeAwareMethods Aware接口注入对象
+            * applyBeanPostProcessorsBeforeInitialization
+            * invokeInitMethods
+            * applyBeanPostProcessorsAfterInitialization
